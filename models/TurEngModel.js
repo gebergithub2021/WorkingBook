@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//bu model de güncellenecek, userId olarak foreign key gelmesi lazım.
+
 const WorkingSchema=new Schema({
+    user:{
+        type: Schema.Types.ObjectId,
+        ref:'User'
+    },
     TurkishWord:{
         type:String,
     },
